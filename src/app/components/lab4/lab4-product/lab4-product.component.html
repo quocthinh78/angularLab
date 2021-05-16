@@ -23,7 +23,7 @@
                     <th>Price </th>
                     <th>5 Star Rating</th>
                 </tr>
-                <tr *ngFor=' let p of products '>
+                <tr *ngFor=' let p of products ; let i = index  ' [routerLink]="['/lab4/product' , p.productId ]">
                     <td><img [src]="p.imageUrl" [attr.width]="'50px'"></td>
                     <td>{{p.productName}}</td>
                     <td>{{p.productCode}}</td>

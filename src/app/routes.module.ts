@@ -2,6 +2,8 @@ import { Lab1Component } from './components/lab1/lab1.component';
 import { Lab2Component } from './components/lab2/lab2.component';
 import { Lab3Component } from './components/lab3/lab3.component';
 import { Lab4Component } from './components/lab4/lab4.component';
+import { Lab4ProductComponent } from './components//lab4/lab4-product/lab4-product.component';
+import { DetailProductComponent } from './components/lab4/detail-product/detail-product.component';
 
 import {Routes} from '@angular/router'
 
@@ -25,11 +27,12 @@ export const Route : Routes = [
         children : [
             {
                 path : '', 
-                component : Lab4Component
+                component :Lab4ProductComponent 
             },
-            // {
-            //     path : 'product/:id'
-            // }
+            {
+                path : 'product/:id',
+                component :DetailProductComponent
+            }
         ]
     },
 ]
