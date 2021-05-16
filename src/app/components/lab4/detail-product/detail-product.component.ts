@@ -9,7 +9,7 @@ import {ActivatedRoute} from '@angular/router';
   styleUrls: ['./detail-product.component.css']
 })
 export class DetailProductComponent implements OnInit {
-  public product : any;
+  public product :any;
   constructor(
     public activatedRoute : ActivatedRoute
   ) { }
@@ -69,11 +69,8 @@ export class DetailProductComponent implements OnInit {
     this.loadData();
   }
   loadData(){
-    let id = this.activatedRoute.snapshot.params['id'];
+    let id = parseInt(this.activatedRoute.snapshot.params['id']);
     this.product = this.products.filter(p => {
-      console.log(p.productId)
-      console.log(id)
-
       return p.productId === id
     });
     console.log(this.product)

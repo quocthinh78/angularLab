@@ -1,16 +1,23 @@
-<div class="card">
-    <div class="card-header">
-        dsf
+<div class="card" *ngFor="let item of product" [style.margin-top.px]="30">
+    <div class=" card-header ">
+        <h3>{{item.productName}}</h3>
     </div>
-    <div class="card-body">
-        <div>Name : </div>
-        <div>Code : </div>
-        <div>Description : </div>
-        <div>Availabilities : </div>
-        <div>Price : </div>
-        <div>5 Start Raiting : </div>
+    <div class="card-body row " [style.padding.px]="40">
+        <div class="row">
+            <div class="col-lg-6">
+                <div>Name : {{item.productName}}</div>
+                <div>Code : {{item.productCode}}</div>
+                <div>Description : {{item.description}}</div>
+                <div>Availabilities : {{item.releaseDate}}</div>
+                <div>Price :{{item.price}} </div>
+                <div>5 Start Raiting : {{item.starRating}}</div>
+            </div>
+            <div class="col-lg-6">
+                <img src="{{item.imageUrl}}" alt="">
+            </div>
+        </div>
     </div>
-    <div class="card-footer">
-        <div class="back" [routerLink]="['/lab4']">Back</div>
+    <div class="card-footer ">
+        <div class="back " [routerLink]="[ '/lab4'] ">Back</div>
     </div>
 </div>
