@@ -1,0 +1,44 @@
+<div class="container">
+    <div [style.border]="'1px solid red'">
+        <img src="{{student.anh}}" alt="">
+        <ul>
+            <li>Họ tên: {{student.name}}</li>
+            <li>Giới tính: {{student.gioitinh}}</li>
+            <li>Ngày sinh: {{student.ngaysinh}}</li>
+            <li>Diểm TB: {{student.diem}}</li>
+        </ul>
+    </div>
+
+    <h1 [style.padding.px]="30">Bai 2</h1>
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>First</th>
+                <th>Last</th>
+                <th>Year</th>
+                <th>Passed</th>
+            </tr>
+        </thead>
+        <tbody id="inventor">
+            {{show()}}
+        </tbody>
+    </table>
+
+    <h1 [style.padding.px]="30">Bai 3</h1>
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Product</th>
+                <th>Code</th>
+                <th>Available</th>
+                <th>Price</th>
+                <th>Start</th>
+            </tr>
+        </thead>
+        <tbody id="product">
+            {{showProduct()}}
+        </tbody>
+    </table>
+</div>

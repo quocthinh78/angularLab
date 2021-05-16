@@ -1,0 +1,36 @@
+<h1 [style.padding-top.px]="30">
+    Filter</h1>
+<label for="">Filter By: </label>
+<input type="text" class="form-control" [(ngModel)]="value" (input)='filter()'>
+<table class="table table-info table-bordered table-hover" [style.margin-top.px]="30">
+    <thead>
+        <tr>
+            <th>Image</th>
+            <th>Product</th>
+            <th>Code</th>
+            <th>Available</th>
+            <th>Price</th>
+            <th>5 Start Raiting</th>
+        </tr>
+    </thead>
+    <tbody id="product">
+        <tr *ngFor='let p of products'>
+            <td><img src="{{p.imageUrl}}" width="50px"></td>
+            <td>{{p.productName}}</td>
+            <td>{{p.productCode}}</td>
+            <td>{{p.releaseDate}}</td>
+            <td>{{p.price}}</td>
+            <td>
+                <div class="crop" [style.width.px]="p.starRating*90/5" title="rating" [style.overflow]="'hidden'">
+                    <div style="width: 120px">
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>

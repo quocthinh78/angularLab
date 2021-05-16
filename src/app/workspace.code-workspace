@@ -1,0 +1,28 @@
+{
+    "folders": [
+		{
+			"path": "../../../../vue-nuxt/nuxtproject"
+		},
+		{
+			"path": "../../../lifeCycle"
+		},
+		{
+			"path": "../../../../backend/econs-api"
+		},
+		{
+			"path": "../../../httpss"
+		},
+		{
+			"path": "../../../drivenform"
+		},
+		{
+			"path": "../.."
+		},
+		{
+			"path": "../../../router"
+		}
+	],
+    "settings": {
+        "liveServer.settings.multiRootWorkspaceName": "projetcss"
+    }
+}
