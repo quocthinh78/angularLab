@@ -4,6 +4,10 @@ import { Lab3Component } from './components/lab3/lab3.component';
 import { Lab4Component } from './components/lab4/lab4.component';
 import { Lab4ProductComponent } from './components//lab4/lab4-product/lab4-product.component';
 import { DetailProductComponent } from './components/lab4/detail-product/detail-product.component';
+import { Lab5Component } from './components/lab5/lab5.component';
+import { ReactiveformComponent } from './components/lab5/reactiveform/reactiveform.component';
+import { TempalteformComponent } from './components/lab5/tempalteform/tempalteform.component'
+import { Lab6Component } from './components/lab6/lab6.component'
 
 import {Routes} from '@angular/router'
 
@@ -35,4 +39,22 @@ export const Route : Routes = [
             }
         ]
     },
+    {
+        path : 'lab5', 
+        component : Lab5Component,
+        children : [
+            {
+                path : 'template-form', 
+                component :TempalteformComponent 
+            },
+            {
+                path : 'reactive-form',
+                component :ReactiveformComponent
+            }
+        ]
+    },
+    {
+        path : 'lab6', 
+        component : Lab6Component
+    }
 ]

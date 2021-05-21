@@ -1,0 +1,24 @@
+<div class="row" [style.margin-top.px]="50">
+    <div class="col-lg-6">
+        <form (ngSubmit)="onSubmit(loginForm)" #loginForm="ngForm">
+            <div id="user-data">
+                <div class="form-group">
+                    <label>Tài khoản</label>
+                    <input type="email" class="form-control" required minlength="2" [(ngModel)]="user.name" name="user" #username="ngModel">
+                    <!-- <a class="btn btn-secondary" (click)="suggest()">Tên đề suất</a> -->
+                    <label [style.color]="'red'" for="" *ngIf="username.errors?.required && username?.dirty">Vui lòng nhập tên</label>
+                    <label [style.color]="'red'" for="" *ngIf="username.errors?.minlength">Tên đăng nhập phải có trên 6 kí tự </label>
+                    <!-- <span *ngIf="username?.valid  && (username?.dirty||username?.touched)">Email không hợp lệ</span> -->
+                </div>
+
+                <div class="form-group">
+                    <label>Mật khẩu</label>
+                    <input type="password" class="form-control" required minlength="6" [(ngModel)]="user.pass" name="pass" #pass="ngModel">
+                    <label [style.color]="'red'" for="" *ngIf="pass.errors?.required && pass?.dirty">Vui lòng nhập mật khẩu</label>
+                    <label [style.color]="'red'" for="" *ngIf="pass.errors?.minlength">Mật khẩu nhập phải có trên 6 kí tự </label>
+                </div>
+                <button type="submit" class="btn btn-primary">Đăng Nhập</button>
+            </div>
+        </form>
+    </div>
+</div>

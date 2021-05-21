@@ -1,0 +1,48 @@
+<div class="row" [style.margin-top.px]="50">
+    <div class="col-lg-6">
+        <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+            <div id="user-data">
+                <div class="form-group">
+                    <label>Tên sản phẩm</label>
+                    <input type="text" name="name" class="form-control" formControlName="name">
+                    <label for="" [style.color]="'red'" *ngIf="productForm.controls.name.errors?.required && productForm.controls.description.dirty">Vui lòng nhập</label>
+                    <label for="" [style.color]="'red'" *ngIf="productForm.controls.name.errors?.minlength">Tên phải trên 6 kí tự</label>
+                </div>
+                <div class="form-group">
+                    <label>Code sản phẩm</label>
+                    <input type="text" name="name" class="form-control" formControlName="code">
+                    <label for="" [style.color]="'red'" *ngIf="productForm.controls.code.errors?.required && productForm.controls.description.dirty">Vui lòng nhập</label>
+                    <label for="" [style.color]="'red'" *ngIf="productForm.controls.code.errors?.minlength">Tên phải trên 6 kí tự</label>
+                </div>
+                <div class="form-group">
+                    <label>Mô tả sản phẩm</label>
+                    <input type="text" name="name" class="form-control" formControlName="description">
+                    <label for="" [style.color]="'red'" *ngIf="productForm.controls.description.errors?.required && productForm.controls.description.dirty">Vui lòng nhập</label>
+                    <label for="" [style.color]="'red'" *ngIf="productForm.controls.description.errors?.minlength">Tên phải trên 6 kí tự</label>
+                </div>
+                <div class="form-group">
+                    <label>Gía sản phẩm</label>
+                    <input type="number" name="name" class="form-control" formControlName="price">
+                    <label for="" [style.color]="'red'" *ngIf="productForm.controls.price.errors?.required && productForm.controls.price.dirty">Vui lòng nhập giá</label>
+                    <label for="" [style.color]="'red'" *ngIf="productForm.controls.price.errors?.min">Gía phải trên 5</label>
+                    <label for="" [style.color]="'red'" *ngIf="productForm.controls.price.errors?.max">Gía phải dưới 10</label>
+
+                </div>
+                <div class="form-group">
+                    <label>Sao</label>
+                    <input type="number" name="name" class="form-control" formControlName="raiting">
+                    <label for="" [style.color]="'red'" *ngIf="productForm.controls.raiting.errors?.required && productForm.controls.price.dirty">Vui lòng nhập Sao</label>
+                    <label for="" [style.color]="'red'" *ngIf="productForm.controls.raiting.errors?.min">Sao phải trên 0</label>
+                    <label for="" [style.color]="'red'" *ngIf="productForm.controls.raiting.errors?.max">Sao phải dưới 5</label>
+                </div>
+                <div class="form-group">
+                    <label>Ảnh</label>
+                    <input type="text" name="name" class="form-control" formControlName="image">
+                    <label for="" [style.color]="'red'" *ngIf="productForm.controls.image.errors?.required && productForm.controls.image.dirty">Vui lòng Img</label>
+
+                </div>
+                <button type="submit" class="btn btn-primary">Đăng Nhập</button>
+            </div>
+        </form>
+    </div>
+</div>

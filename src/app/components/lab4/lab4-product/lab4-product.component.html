@@ -25,10 +25,10 @@
                 </tr>
                 <tr *ngFor=' let p of products ; let i = index  ' [routerLink]="['/lab4/product' , p.productId ]">
                     <td><img [src]="p.imageUrl" [attr.width]="'50px'"></td>
-                    <td>{{p.productName}}</td>
+                    <td>{{p.productName |uppercase}}</td>
                     <td>{{p.productCode}}</td>
                     <td>{{p.releaseDate}}</td>
-                    <td>{{p.price|currency}}</td>
+                    <td>{{p.price|currency: 'VND' : '': '1.3' }} đồng</td>
                     <td>
                         <app-star [raiting]="p.starRating" (raitingClicked)="nhanxet($event)"></app-star>
                     </td>
