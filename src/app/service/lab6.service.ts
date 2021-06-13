@@ -6,7 +6,7 @@ import { Observable} from 'rxjs';
   providedIn: 'root'
 })
 export class Lab6Service {
-  public API = 'http://localhost:3000/todo'
+  public API = 'https://60bb025a42e1d00017620336.mockapi.io/react/api/products'
   constructor(
     public http : HttpClient
   ) { }

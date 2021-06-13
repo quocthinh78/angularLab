@@ -22,10 +22,11 @@ export class Lab6Component implements OnInit {
   loadData(){
     this.subscription = this.todoService.getAllProduct().subscribe(product=>{
       this.todos = product;
+      console.log(product);
     })
   }
   addTodo(){
-    let todo = new Todo(Date.now() , this.product.title , this.product.status);
+    let todo = new Todo(Date.now() , this.product.name , this.product.des);
     this.subscription = this.todoService.addTodo(todo).subscribe(data=> {
       this.todos.push(data);
     })

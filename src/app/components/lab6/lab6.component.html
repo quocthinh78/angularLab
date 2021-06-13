@@ -5,8 +5,8 @@
                 <thead>
                     <tr>
                         <th>Id</th>
-                        <th>Title</th>
-                        <th>Status</th>
+                        <th>Name</th>
+                        <th>Description</th>
                         <th>Active</th>
                     </tr>
 
@@ -14,8 +14,8 @@
                 <tbody>
                     <tr *ngFor="let item of todos">
                         <td>{{item.id}}</td>
-                        <td>{{item.title}}</td>
-                        <td>{{item.status ? 'Active' : "Disable"}}</td>
+                        <td>{{item.name}}</td>
+                        <td>{{item.des}}</td>
                         <td>
                             <button class="btn btn-success" (click)="editTodo(item)">Sua</button>
                             <button class="btn btn-danger" (click)="deleteTodo(item.id)">Xoa</button>
@@ -34,15 +34,12 @@
             </div>
             <form [style.margin-top.px]="30">
                 <div class="form-group">
-                    <label for="my-input">Title</label>
-                    <input id="my-input" class="form-control" [(ngModel)]="product.title" [ngModelOptions]="{standalone: true}">
+                    <label for="my-input">Name</label>
+                    <input id="my-input" class="form-control" [(ngModel)]="product.name" [ngModelOptions]="{standalone: true}">
                 </div>
                 <div class="form-group">
-                    <label for="my-select">Status</label>
-                    <select id="my-select" class="form-control" [(ngModel)]="product.status" [ngModelOptions]="{standalone: true}">
-                    <option value="true">Active</option>
-                    <option value="false">Disable</option>
-                  </select>
+                    <label for="my-input">Description</label>
+                    <input id="my-input" class="form-control" [(ngModel)]="product.des" [ngModelOptions]="{standalone: true}">
                 </div>
             </form>
             <button *ngIf="isFormAdd" type="button" (click)="addTodo()" class="btn btn-primary">Them</button>

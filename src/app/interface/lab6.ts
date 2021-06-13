@@ -1,10 +1,10 @@
 export class Todo {
     public id: number;
-    public title : string;
-    public status : boolean;
-    constructor(id: number =0, title: string ='' , status: boolean = false){
+    public name : string;
+    public des : string;
+    constructor(id: number =0, name: string ='' , des: string = ''){
         this.id = id;
-        this.title = title;
-        this.status = status;
+        this.name = name;
+        this.des = des;
     }
 }   
